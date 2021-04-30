@@ -1,0 +1,259 @@
+//底部模块
+.footer{
+    .footer-site{
+         //服务模块
+         .footer-service{
+             border-bottom:1px solid #e0e0e0;
+            .service-list{
+                padding: 27px 0px;
+                .service-item{
+                    float: left;
+                    width: 244px;
+                    height: 25px;
+                    font-size: 16px;
+                    line-height: 25px;
+                    text-align: center;
+                    border-right: 1px solid #ccc;
+                    a{
+                        color: #616161;
+                        transition: color .2s;
+                        .iconfont-tool{
+                            margin-right: 6px;
+                            font-size: 26px;
+                            line-height: 26px;
+                            vertical-align: -4px;
+                            &::after{
+                                font-style: normal;
+                                font-family: 'iconfont';
+                                content: '\e602';
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        .iconfont-tool{
+                            &::after{
+                                content: '\e630';
+                            }
+                        }
+                    }
+                    &:nth-child(3){
+                        .iconfont-tool{
+                            &::after{
+                                content: '\e601';
+                            }
+                        }
+                    }
+                    &:nth-child(4){
+                        .iconfont-tool{
+                            &::after{
+                                content: '\e613';
+                            }
+                        }
+                    }
+                    &:nth-child(5){
+                        border:0;
+                        .iconfont-tool{
+                            &::after{
+                                content: '\e614';
+                            }
+                        }
+                    }
+                } 
+                .service-item-active{
+                    a{
+                        color:#ff6700
+                    }
+                }
+            }
+        }
+        // 友情链接部分
+        .footer-links{
+            padding:40px 0px;
+            .col-links{
+                float: left;
+                width: 160px;
+                margin:0;
+                dt{
+                    font-size:14px;
+                    margin-bottom: 26px;
+                    color: #424242;
+                    line-height: 1.25;
+                }
+                dd{
+                    margin:10px 0px 0px;
+                    font-size:12px;
+                    a{
+                        color: #757575;
+                        &:hover{
+                            color:#ff6700;
+                        }
+                    }
+ 
+                }
+            }
+            .col-contact{
+                float: right;
+                width: 251px;
+                text-align: center;
+                font-size: 12px;
+                border-left: 1px solid #e0e0e0;
+                color: #616161;
+                .phonenum{
+                    font-size:22px;
+                    color:#ff6700;
+                }
+                p{
+                    margin: 0px 0px 5px;
+                    line-height: 22px;
+                }
+                .follow{
+                    display: inline-block;
+                    width: 118px;
+                    height: 28px;
+                    line-height: 28px;
+                    border:1px solid #ff6700;
+                    color:#ff6700;
+                    font-size: 12px;
+                    transition: all .4s;
+                    em{
+                        margin-right: 3px;
+                        &::after{
+                            font-style:normal;
+                            font-family: 'iconfont';
+                            content: '\e669';
+                        }
+                    }
+                }
+                .follow-active{
+                    background-color:#ff6700;
+                    color:#fff;
+                }
+                .followno{
+                    margin-top: 10px;
+                    font-size: 12px;
+                    position: relative;
+                    a{
+                        display: inline-block;
+                        width: 24px;
+                        height: 24px;
+                        vertical-align: middle;
+                        margin:-3px 0px 0px 6px;
+                    }
+                    .wb{
+                        background: url(../images/wb.png) no-repeat;
+                        background-size: 24px;
+                        transition: all .2s;
+                        &:hover{
+                            background-image: url(../images/wb@2x.png);
+                        }
+                    }
+                    .wx{
+                        background: url(../images/wx.png) no-repeat;
+                        background-size: 24px;
+                        transition: all .2s;
+                        &:hover{
+                            background-image: url(../images/wx@2x.png);
+                        }
+                    }
+                    .wximg{
+                        opacity: 0;
+                        width: 126px;
+                        height: 126 px;
+                        z-index: 2;
+                        position: absolute;
+                        top: 20px;
+                        left: 100px;
+                        transition: opacity .5s;
+                        pointer-events:none;
+                    }
+                    .wximg-active{
+                        opacity: 1;
+                        pointer-events:auto;
+                    }
+                }
+            }
+        }
+    }
+    .footer-info{
+        padding :30px 0px 30px;  
+        background-color: #fafafa;
+        .w{
+            position: relative; 
+            // logo部分
+            .logo{
+                position: absolute;
+                width: 56px;
+                height: 56px;
+                top: 0;
+                left: 0;
+                margin-right: 10px;
+                text-indent: -9999px;
+                overflow: hidden;
+                background: url(../images/mi-logo.png) no-repeat;
+                background-color: #ff6700;
+                background-size: 100%;
+            }
+            // 信息文本区域
+            .info-text{
+                padding-left: 67px;
+                font-size:12px;
+                p{
+                    color: #b0b0b0;
+                    margin: 0;
+                    line-height: 18px;
+                    a{
+                        color: #b0b0b0; 
+                        &:hover{
+                            color:#ff6700;
+                        }    
+                    }
+                }
+                .sites{
+                    a{
+                        color:#757575;
+                    }
+                }
+            }
+            // 信息链接区域
+            .info-links{
+                height: 28px;
+                margin-top: 4px;
+                padding-left:67px;
+                a{
+                    display: inline-block;
+                    img{
+                        height: 28px;
+                    }
+                }
+                .safe-img{
+                    position: absolute;
+                    width: 75px;
+                    height: 28px;
+                    overflow: hidden;
+                    margin-left: 5px;
+                    img{
+                        position: absolute;
+                        top: 0;
+                        left:0;
+                        transition: opacity .4s;
+                    }
+                    .img1{
+                        z-index: 2;
+                        opacity: 1;
+                    }
+                    .img2{
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        .slogan{
+            width: 100%;
+            margin: 45px 0px 0px;
+            height: 19px;
+            text-indent: -9999px;
+            overflow: hidden    ;
+            background: url(../images/slogan2020.png) no-repeat center;
+        }
+    }
+}

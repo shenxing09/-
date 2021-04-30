@@ -1,0 +1,413 @@
+// 头部
+.header{
+    .site-topbar{
+        background-color: #333;
+        .container{
+            height: 40px;
+            font-size: 12px;
+            a{
+                //方便设置行高，设置行高后a标签的触发范围变大
+                display: inline-block;
+                line-height: 40px;
+                color:#b0b0b0;
+                //鼠标移动到a标签上面改变颜色
+                &:hover{
+                    color: #fff;
+                }
+                
+            }
+            .topbar-nav{
+                float: left;
+                height: 40px;
+                //下载app下拉部分
+                .topbar-down{
+                    position: relative;
+                   .appcode{
+                        position: absolute;
+                        top: 40px;
+                        left: 50%;
+                        z-index: 3;
+                        width: 124px;
+                        height: 0px;
+                        font-size: 14px;
+                        overflow: hidden;
+                        //覆盖掉之前a标签的40px行高
+                        line-height: 14px;
+                        text-align: center;
+                        box-shadow: 0 1px 5px #aaa;
+                        background-color: #fff;
+                        transform: translateX(-50%);
+                        transition: height .3s;
+                        img{
+                            //让图片独占一行
+                           display: block;
+                           width: 90px;
+                           height: 90px;
+                           margin: 18px auto 12px;
+                       }
+                   }
+                   
+               }
+               .show{
+                    &::before{
+                        position:absolute;
+                        bottom: 0;
+                        left: 50%;
+                        content: '';
+                        border-color: rgba(255, 255, 255,.5);
+                        border-width: 8px 8px 0px 0px ;
+                        border-style: solid;
+                        transform: translate(-50%,4px) rotate(45deg);
+                        transition: 0.5s;
+                    }
+               }
+               span{
+                color: #424242;
+                margin: 0px .3em;
+                font-family: sans-serif;
+                line-height: 40px;
+            }
+            }
+            .topbar-cart{
+                position: relative;
+                float: right;
+                width: 120px;
+                height: 40px;
+                margin-left: 15px;
+
+                a{
+                    display: inline-block;
+                    width: 120px;
+                    height: 40px;
+                    text-align: center;
+                    background: #424242;
+                    color: #b0b0b0;
+                    .icon-cart{
+                        margin-right: 4px;
+                        font-size: 20px;
+                        line-height: 20px;
+                        vertical-align: -2px;
+                        &::before{
+                            font-family: "iconfont" !important;
+                            content: "\e610";
+                        }
+                    } 
+                }
+                .shopcar-con{
+                    position: absolute;
+                    top:40px;
+                    right: 0;
+                    z-index: 4;
+                    width: 316px;
+                    height: 0px;
+                    overflow: hidden;
+                    line-height: 100px;
+                    text-align: center;
+                    color: #424242;
+                    background-color: #fff;
+                    box-shadow: 0px 2px 10px rgba(0,0,0,0.15);
+                    transition: 0.5s;
+                }
+                a.cart-color{
+                    color: #ff6700;
+                    background-color: #fff;
+                    span{
+                        color: #ff6700;
+                    }   
+                }
+            }
+            .topbar-info{
+                float: right;
+                height: 40px;
+                a{
+                   float: left;
+                   padding: 0px 5px;
+                   &:last-child{
+                       padding: 0px 10px;
+                   }
+                }
+                span{
+                    color: #424242;
+                    margin: 0px .3em;
+                    font-family: sans-serif;
+                    line-height: 40px;
+                   margin: 0;
+                   float: left;
+                }
+
+            }
+        }
+    }   
+    .site-header{
+        position: relative;
+        height: 100px;
+        .container{
+            // logo
+            .header-logo{
+                position: relative;
+                float: left;
+                width: 62px;
+                height: 62px;
+                margin-top: 22px;
+                text-indent: -9999px;
+                &::before{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    content: '';
+                    width: 56px;
+                    height: 56px;
+                    background: url(../images/mi-logo.png) no-repeat;
+                    background-color: #ff6700;
+                    background-size: 100%;
+                }
+            }
+            // 导航栏部分
+            .header-nav{
+                width: 850px;
+                float: left;
+                .nav-list{
+                    float: left;
+                    height: 88px;
+                    padding: 12px 0px 0px 30px ;
+                    font-size: 16px;
+                    .nav-item{
+                        float: left;
+                        .link{
+                            display: block;
+                            color: #333;
+                            padding: 26px 10px 38px;
+                            &:hover{
+                                color: #ff6700;
+                            }
+                        }
+                        .nav-item-children{
+                            position: absolute;
+                            top: 100px;
+                            left: 0px;
+                            // display: none;
+                            visibility: hidden;
+                            width: 100%;
+                            height: 0px;
+                            overflow: hidden;
+                            z-index: 2;
+                            background-color: #fff;
+                            box-shadow:0px 3px 4px rgba(0,0,0,.2);
+                            border-top:1px solid #e0e0e0;
+                            // transition:height 1s;
+                            ul{
+                                height: 229px;
+                                li{
+                                    position: relative;
+                                    float: left;
+                                    width: 180px;
+                                    padding: 35px 12px 0;
+                                    text-align: center;
+                                    em{
+                                        position: absolute;
+                                        right: 0;
+                                        top: 40px;
+                                        width: 1px;
+                                        height: 100px;
+                                        background-color: #e0e0e0;
+                                    }
+                                    a{
+                                        font-size: 12px;
+                                        .thumb{
+                                            width: 160px;
+                                            height: 110px;
+                                            margin: 0px auto 16px;
+                                            img{
+                                                width: 100%;
+                                                height: 100%;
+                                            }
+                                        }
+                                        .title{
+                                            line-height: 20px;
+                                            color:#333;
+                                        }
+                                        p{
+                                            margin: 0;
+                                            line-height: 20px;
+                                            color: #ff6700;
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    } 
+                    //  第一个导航栏，可做出下拉列表，下拉列表中是左侧导航栏
+                    .nav-category{
+                        position: relative;
+                        width: 127px;
+                        float: left;
+                        padding-right: 15px;
+                        .link-category{
+                            //  第一个导航内容根据现有需求隐藏
+                            display: block;
+                            visibility: hidden;
+                            color: #333;
+                            padding: 26px 0px 38px;
+                            text-align: right;
+                        }
+                        // 左侧导航栏
+                        .site-category{
+                            z-index:1;
+                            position: absolute;
+                            top: 88px;
+                            left: -92px;
+                            width: 234px;
+                            height: 460px;
+                            font-size: 14px;
+                            .site-category-list{
+                                position: relative;
+                                height: 420px;
+                                padding: 20px 0px;
+                                color: #fff;
+                                background-color: rgba(105,101,101,.6);
+                                .category-item{
+                                    //每个左边导航栏的样式
+                                    .title{
+                                        position: relative;
+                                        display: block;
+                                        height: 42px;
+                                        padding-left: 30px;
+                                        line-height: 42px;
+                                        color: #fff;
+                                        .iconfont-right{
+                                            position: absolute;
+                                            top: 13px;
+                                            right: 20px;
+                                            font-size:16px;
+                                            line-height: 16px;
+                                            font-style: normal;
+                                            color: #e0e0e0;
+                                            &::before{
+                                                font-family: "iconfont" !important;
+                                                content: '\e63c';
+                                            }
+                                        }
+                                    }
+                                    //每个左边导航栏的弹出框
+                                    .children{
+                                        // display: block;
+                                        display: none;
+                                        position: absolute;
+                                        width: 994px;
+                                        left: 234px;
+                                        top:0;
+                                        height: 458px;
+                                        border: 1px solid #e0e0e0;
+                                        border-left: 0;
+                                        background-color: #fff;
+                                        box-shadow: 0px 8px 16px rgba(0 ,0, 0 , .18);
+                                        .children-ul{
+                                            float: left;
+                                            width: 248px;
+                                            height: 458px;
+                                            padding:1px 0px;
+                                            .children-li{
+                                                width: 265px;
+                                                height: 76px;
+                                                a{
+                                                    display: block;
+                                                    padding: 18px 20px; 
+                                                    color: #333;  
+                                                    line-height: 40px;
+                                                    img{
+                                                        float: left;
+                                                        width: 40px;
+                                                        height: 40px;
+                                                        vertical-align: middle;
+                                                        margin-right: 12px;
+                                                    }  
+                                                    span{
+                                                        float: left;
+                                                        width: 172px;
+                                                        line-height: 40px;
+                                                        white-space: nowrap;
+                                                        text-overflow: ellipsis;
+                                                        overflow: hidden;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .col-3{
+                                    .children{
+                                        width: 750px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            // 搜索框
+            .header-search{
+                float: right;
+                width: 296px;
+                margin-top: 25px;
+                .search-form{
+                    position: relative;
+                    width: 296px;
+                    height: 50px;
+                    .search-text{
+                        position: absolute;
+                        left: 0;
+                        outline: none;
+                        border: 1px solid #e0e0e0;
+                        width: 223px;
+                        height: 48px;
+                        line-height: 48px;
+                        padding:0px 10px ;
+                        font-size: 14px;
+                        transition: all .3s;
+                    }
+                    .search-btn{
+                        position: absolute;
+                        right: 0;
+                        width: 51px;
+                        height: 50px;
+                        line-height: 47px;
+                        border: 1px solid #e0e0e0;
+                        border-left: 0;
+                        font-size: 19px;
+                        outline: none;
+                        color: #616161;
+                        background-color: transparent;
+                        transition: all .3s;
+                        font-family:'iconfont';
+                    }
+                    .search-text-box{
+                        z-index: 3;
+                        position:absolute;
+                        top: 50px;
+                        left: 0;
+                        width: 243px;
+                        height: 0px;
+                        overflow: hidden;
+                        transition: all .2s;
+                        background-color: #fff;
+                        ul{
+                            li{
+                                a{
+                                    display: block;
+                                    padding: 6px 15px;
+                                    font-size: 12px;
+                                    color: #424242;
+                                }
+                            }
+                        }
+                    }
+                    .search-text-bor{
+                        border:1px solid#ff6700;
+                        border-top: 0;
+                    }
+                }
+            }   
+        }
+    }
+}

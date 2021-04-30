@@ -1,0 +1,100 @@
+{
+  "id": "2508155",
+  "name": "1111111",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "6568979",
+      "name": "维修",
+      "font_class": "weixiu",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "11629171",
+      "name": "客服聊天2",
+      "font_class": "kefuliaotian",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    },
+    {
+      "icon_id": "12665814",
+      "name": "网点",
+      "font_class": "wangdian",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "745595",
+      "name": "7天无理由退货",
+      "font_class": "iconecitemfuzhi",
+      "unicode": "e630",
+      "unicode_decimal": 58928
+    },
+    {
+      "icon_id": "4095572",
+      "name": "礼物",
+      "font_class": "liwu",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "21027681",
+      "name": "15天免费换货_24px.",
+      "font_class": "15tianmianfeihuanhuo24px",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "11472578",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e66e",
+      "unicode_decimal": 58990
+    },
+    {
+      "icon_id": "11156528",
+      "name": "播放",
+      "font_class": "bofang3",
+      "unicode": "e85b",
+      "unicode_decimal": 59483
+    },
+    {
+      "icon_id": "2475362",
+      "name": "右",
+      "font_class": "you",
+      "unicode": "e6b3",
+      "unicode_decimal": 59059
+    },
+    {
+      "icon_id": "4166087",
+      "name": "购物车",
+      "font_class": "gouwuche",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "17498907",
+      "name": "箭头",
+      "font_class": "jiantou",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "21109222",
+      "name": "Right",
+      "font_class": "Right",
+      "unicode": "e619",
+      "unicode_decimal": 58905
+    },
+    {
+      "icon_id": "21109235",
+      "name": "left",
+      "font_class": "left",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    }
+  ]
+}
